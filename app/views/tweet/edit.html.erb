@@ -1,0 +1,7 @@
+<h1>트윗 수정하는 곳</h1>
+<form action="/tweet/<%=@tweet.id%>/update" method="POST">
+    <input type = "hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input class="form-control" type ="text" name="content" value="<%= @tweet.content%>"><br>
+    <input class="btn btn-success" type ="submit" value="수정하기">
+</form>
+

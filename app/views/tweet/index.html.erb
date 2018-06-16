@@ -1,0 +1,12 @@
+    <div class="text-center" >
+    <h1>모든 트윗 출력</h1>
+    
+    <ul class="list-group">
+        <% @tweets.reverse.each do |tweet| %>
+        <li class="list-group-item"><%= tweet.content %> <small>(<%= tweet.ip_address %>)</small>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-secondary" href="/tweet/<%=tweet.id%>">상세보기</a></li>
+        <% end %>
+    </ul>
+    <br><br>
+    <a class="btn btn-primary" href="/tweet/new" >질문 작성</a>
+    </div>
